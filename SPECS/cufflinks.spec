@@ -1,5 +1,5 @@
 Name:           cufflinks
-Version:        2.0.2
+Version:        2.1.1
 Release:        1%{?dist}
 Summary:        Transcript assembly, differential expression, and differential regulation for RNA-Seq
 

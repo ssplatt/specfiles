@@ -1,6 +1,6 @@
 Name:           samtools
 Version:        0.1.19
-Release:        1%{?dist}
+Release:        3%{?dist}
 Summary:        Fast and sensitive read alignment
 
 License:        GPLv3
@@ -33,6 +33,14 @@ SAM Tools provide various utilities for manipulating alignments in the SAM
 format, including sorting, merging, indexing and generating alignments in 
 a per-position format.
 
+%package devel
+Summary:        Header files for creating C extension to Samtools
+Group:          Development/Libraries
+Requires:       %{name} = %{version}-%{release}
+
+%description devel
+The samtools-devel package holds header files for C extensions
+
 %prep
 %setup -q -n %{name}-%{version}
 
@@ -59,8 +67,15 @@ install -m 0755 misc/r2plot.lua %{buildroot}%{_bindir}
 install -m 0755 misc/vcfutils.lua %{buildroot}%{_bindir}
 install -m 0755 misc/wgsim %{buildroot}%{_bindir}
 install -m 0755 misc/*.pl %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_libdir}
+install -m 0644 libbam.a %{buildroot}%{_libdir}
+mkdir -p %{buildroot}/usr/lib
+install -m 0644 libbam.a %{buildroot}/usr/lib/
+mkdir -p %{buildroot}%{_includedir}/bam
+install -m 0644 *.h %{buildroot}%{_includedir}/bam/
 
 %files
+%defattr(-,root,root,-)
 %doc AUTHORS NEWS samtools.1
 %{_bindir}/samtools
 %{_bindir}/razip
@@ -76,9 +91,23 @@ install -m 0755 misc/*.pl %{buildroot}%{_bindir}
 %{_bindir}/*.lua
 %{_bindir}/*.pl
 
+%files devel
+%defattr(-,root,root,-)
+%{_libdir}/libbam.a
+/usr/lib/libbam.a
+%{_includedir}/bam/*.h
+
+%post devel
+/sbin/ldconfig
+
+%postun devel
+/sbin/ldconfig
+
 %changelog
+* Mon Jun 17 2013 Brett Taylor <btaylor@wistar.org> - 0.1.19-2
+- changed put *.h files in _includedir/bam/
+- added post and postun sections
 * Wed May 8 2013 Brett Taylor <btaylor@wistar.org> - 0.1.19
 - updated to version 0.1.19
-
 * Fri Feb 8 2013 Brett Taylor <btaylor@wistar.org> - 0.1.18
 - initial version

@@ -1,19 +1,17 @@
 %define debug_package %{nil}
 
-Name:		tophat
+Name:		tophat-binary
 Version:	2.0.8b
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:	A spliced read mapper for RNA-Seq
 
 Group:		Applications/Engineering
 License:	Artistic 2.0
 URL:		http://tophat.cbcb.umd.edu/
-Source0:	http://tophat.cbcb.umd.edu/downloads/%{name}-%{version}.tar.gz
+Source0:	http://tophat.cbcb.umd.edu/downloads/tophat-%{version}.Linux_x86_64.tar.gz
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      x86_64
-
-BuildRequires:	samtools-devel, boost-devel >= 1.38.0
 
 %description
 
@@ -27,16 +25,14 @@ Center for Bioinformatics and Computational Biology and the University
 of California, Berkeley Departments of Mathematics and Molecular and
 Cell Biology.
 
+This is a package of the binary release provided by the upstream developers.
+
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n tophat-%{version}.Linux_x86_64
 
 
 %build
-#export BAM_ROOT=%{_prefix}
-#echo $BAM_ROOT
-ls -la /usr/lib/libbam.a
-%configure --prefix=%{_prefix} --with-bam=%{_prefix}
-%{__make}
+
 
 %install
 rm -rf %{buildroot}

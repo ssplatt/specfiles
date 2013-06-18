@@ -1,5 +1,5 @@
 Name:           bowtie2
-Version:        2.0.6
+Version:        2.1.0
 Release:        1%{?dist}
 Summary:        Fast and sensitive read alignment
 
@@ -45,6 +45,8 @@ install -m 0755 bowtie2* %{buildroot}%{_bindir}
 
 
 %changelog
+* Mon Jun 17 2013 Brett Taylor <btaylor@wistar.org> - 2.1.0
+- updated to version 2.1.0
 * Mon Jan 28 2013 Brett Taylor <btaylor@wistar.org> - 2.0.6
 - updated to version 2.0.6
 * Mon Jan  9 2012 Adam Huffman <verdurin@fedoraproject.org> - 2.0.0-0.1.beta5%{?dist}
