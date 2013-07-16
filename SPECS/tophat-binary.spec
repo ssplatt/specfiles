@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:		tophat-binary
-Version:	2.0.8b
-Release:        2%{?dist}
+Version:	2.0.9
+Release:        1%{?dist}
 Summary:	A spliced read mapper for RNA-Seq
 
 Group:		Applications/Engineering
@@ -12,6 +12,8 @@ Source0:	http://tophat.cbcb.umd.edu/downloads/tophat-%{version}.Linux_x86_64.tar
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      x86_64
+
+Requires:	zlib >= 1.2.2
 
 %description
 

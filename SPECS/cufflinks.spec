@@ -11,6 +11,7 @@ Source0:        %{name}-%{version}.Linux_x86_64.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      x86_64
 
+Requires:	zlib >= 1.2.2
 #BuildRequires:  
 
 
