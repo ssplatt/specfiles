@@ -14,6 +14,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      x86_64
 
 Requires:	zlib >= 1.2.2
+AutoReqProv:	no
 
 %description
 

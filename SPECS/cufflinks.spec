@@ -13,7 +13,7 @@ BuildArch:      x86_64
 
 Requires:	zlib >= 1.2.2
 #BuildRequires:  
-
+AutoReqProv:	no
 
 %description 
 
