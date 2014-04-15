@@ -1,6 +1,6 @@
 Name:           rsem
-Version:        1.2.3
-Release:        2%{?dist}
+Version:        1.2.12
+Release:        1%{?dist}
 Summary:        RNA-Seq by Expectation-Maximization
 
 License:        GPL
@@ -14,6 +14,7 @@ BuildArch:      x86_64
 BuildRequires:	zlib-devel, ncurses-devel
 
 Requires:	bwa
+Autoreq:	0
 
 %description 
 RSEM is a software package for estimating gene and isoform expression 
