@@ -1,5 +1,5 @@
 Name:           picard-tools
-Version:        1.64
+Version:        1.113
 Release:        1%{?dist}
 Summary:        A set of tools (in Java) for working with next generation sequencing data in the BAM format.
 
@@ -34,5 +34,7 @@ install -m 644 *.jar %{buildroot}%{_bindir}/picard-tools
 %{_bindir}/picard-tools/*.jar
 
 %changelog
+* Thu May 15 2014 Brett Taylor <btaylor@wistar.org> - 1.113
+- new version
 * Wed Mar 27 2013 Brett Taylor <btaylor@wistar.org> - 1.64
 - initial version
