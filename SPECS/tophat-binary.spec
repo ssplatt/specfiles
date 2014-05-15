@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:		tophat-binary
-Version:	2.0.9
-Release:        1%{?dist}
+Version:	2.0.11
+Release:	1%{?dist}
 Summary:	A spliced read mapper for RNA-Seq
 
 Group:		Applications/Engineering
@@ -72,6 +72,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 15 2014 Brett Taylor <btaylor@wistar.org> - 2.0.11
+- updated version
+
 * Thu May 02 2013 Brett Taylor <btaylor@wistar.org> - 2.0.8b-1
 - changed to version 2.0.8b
 

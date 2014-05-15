@@ -1,5 +1,5 @@
 Name:           bowtie
-Version:        0.12.9
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        An ultrafast memory-efficient short read aligner
 
@@ -42,5 +42,7 @@ install -m 0755 bowtie* %{buildroot}%{_bindir}
 
 
 %changelog
+* Thu May 15 2014 Brett Taylor<btaylor@wistar.org> - 1.0.1
+- new version
 * Fri Feb 8 2013 Brett Taylor <btaylor@wistar.org> - 0.12.9
 - initial version

@@ -1,5 +1,5 @@
 Name:           bowtie2
-Version:        2.1.0
+Version:        2.2.2
 Release:        1%{?dist}
 Summary:        Fast and sensitive read alignment
 
@@ -45,6 +45,8 @@ install -m 0755 bowtie2* %{buildroot}%{_bindir}
 
 
 %changelog
+* Thu May 15 2014 Brett Taylor <btaylor@wistar.org> - 2.2.2
+- updated to version 2.2.2
 * Mon Jun 17 2013 Brett Taylor <btaylor@wistar.org> - 2.1.0
 - updated to version 2.1.0
 * Mon Jan 28 2013 Brett Taylor <btaylor@wistar.org> - 2.0.6

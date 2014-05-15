@@ -1,5 +1,5 @@
 Name:           cufflinks
-Version:        2.1.1
+Version:        2.2.1
 Release:        1%{?dist}
 Summary:        Transcript assembly, differential expression, and differential regulation for RNA-Seq
 
@@ -52,5 +52,8 @@ install -m 0755 gtf_to_sam %{buildroot}%{_bindir}
 
 
 %changelog
+* Thu May 15 2014 Brett Taylor <btaylor@wistar.org> - 2.2.1
+- updated version
+
 * Fri Feb 8 2013 Brett Taylor <btaylor@wistar.org> - 2.0.2
 - initial version
