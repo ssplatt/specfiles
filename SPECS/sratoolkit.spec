@@ -17,7 +17,7 @@ The NCBI SRA Toolkit provides for easy reading (dumping) of sequencing files
 from SRA database and writing (loading) to the SRA database.
 
 %prep
-%setup -q -n %{name}.%{version}-centos_linux64
+%setup -q -n %{name}.%{version}-2-centos_linux64
 
 %build
 
