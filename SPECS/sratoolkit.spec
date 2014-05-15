@@ -1,12 +1,12 @@
 Name:           sratoolkit
-Version:        2.3.5-2
+Version:        2.3.5
 Release:        1%{?dist}
 Summary:        The NCBI SRA Toolkit provides for easy reading (dumping) of sequencing files from SRA database and writing (loading) to the SRA database.
 
 License:        GPLv3
 Group:		Other
 URL:		http://www.ncbi.nlm.nih.gov/Traces/sra/?view=software
-Source0:        http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.3.5-2/%{name}.%{version}-centos_linux64.tar.gz
+Source0:        http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.3.5-2/%{name}.%{version}-2-centos_linux64.tar.gz
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      x86_64
