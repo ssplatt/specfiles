@@ -26,25 +26,26 @@ from SRA database and writing (loading) to the SRA database.
 rm -rf %{buildroot}
 
 install -d %{buildroot}%{_bindir}
-install abi-dump* %{buildroot}%{_bindir}
-install abi-load* %{buildroot}%{_bindir}
-install fastq-dump* %{buildroot}%{_bindir}
-install fastq-load* %{buildroot}%{_bindir}
-install helicos-load* %{buildroot}%{_bindir}
-install illumina-dump* %{buildroot}%{_bindir}
-install illumina-load* %{buildroot}%{_bindir}
-install kar* %{buildroot}%{_bindir}
-install kdbmeta* %{buildroot}%{_bindir}
-install rcexplain* %{buildroot}%{_bindir}
-install sff-dump* %{buildroot}%{_bindir}
-install sff-load* %{buildroot}%{_bindir}
-install sra-dbcc* %{buildroot}%{_bindir}
-install sra-dump* %{buildroot}%{_bindir}
-install sra-kar* %{buildroot}%{_bindir}
-install sra-stat* %{buildroot}%{_bindir}
-install srf-load* %{buildroot}%{_bindir}
-install vdb-copy* %{buildroot}%{_bindir}
-install vdb-dump* %{buildroot}%{_bindir}
+install bin/abi-dump* %{buildroot}%{_bindir}
+install bin/abi-load* %{buildroot}%{_bindir}
+install bin/fastq-dump* %{buildroot}%{_bindir}
+install bin/fastq-load* %{buildroot}%{_bindir}
+install bin/helicos-load* %{buildroot}%{_bindir}
+install bin/illumina-dump* %{buildroot}%{_bindir}
+install bin/illumina-load* %{buildroot}%{_bindir}
+install bin/kar* %{buildroot}%{_bindir}
+install bin/kdbmeta* %{buildroot}%{_bindir}
+install bin/rcexplain* %{buildroot}%{_bindir}
+install bin/sff-dump* %{buildroot}%{_bindir}
+install bin/sff-load* %{buildroot}%{_bindir}
+install bin/sra-dbcc* %{buildroot}%{_bindir}
+install bin/sra-dump* %{buildroot}%{_bindir}
+install bin/sra-kar* %{buildroot}%{_bindir}
+install bin/sra-stat* %{buildroot}%{_bindir}
+install bin/srf-load* %{buildroot}%{_bindir}
+install bin/vdb-copy* %{buildroot}%{_bindir}
+install bin/vdb-dump* %{buildroot}%{_bindir}
+install bin/sratoolkit.jar %{buildroot}%{_bindir}
 
 %post
 
@@ -72,6 +73,7 @@ install vdb-dump* %{buildroot}%{_bindir}
 %{_bindir}/srf-load*
 %{_bindir}/vdb-copy*
 %{_bindir}/vdb-dump*
+%{_bindir}/sratoolkit.jar
 
 %changelog
 * Thu May 15 2014 Brett Taylor <btaylor@wistar.org> - 2.3.5-2
